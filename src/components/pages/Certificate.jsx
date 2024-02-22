@@ -6,14 +6,14 @@ export const Certificate = () => {
     {
       id: 1,
       src: filePath + "/cert1.png",
-      name: "Certificate of Completion",
+      name: "Certificate of Participation",
       description:
         "Participated in GoCrayons: Web Design and Web Development Workshop",
     },
     {
       id: 2,
       src: filePath + "/cert2.png",
-      name: "Certificate of Participation",
+      name: "Certificate of Completion",
       description: "Certificate of Completion: Endsofttech Web Solutions (EWS)",
     },
   ];

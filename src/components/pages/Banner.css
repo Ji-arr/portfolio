@@ -100,7 +100,7 @@
     max-width: 100vw;
     background-color: var(--background-color);
     justify-content: center;
-    padding: 5vh 30vh;
+    padding: 5vh 10vh;
   }
 
   .banner .flex-wrap {

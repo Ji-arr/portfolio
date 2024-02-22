@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
 
 export const NavBar = () => {
@@ -6,7 +6,14 @@ export const NavBar = () => {
     { index: 0, href: "banner", text: "home" },
     { index: 1, href: "project", text: "project" },
     { index: 2, href: "certificate", text: "certificate" },
+    { index: 3, href: "contact", text: "contact" },
   ];
+
+  const [colorChanged, setColorChanged] = useState(false);
+
+  const handleColorChange = () => {
+    setColorChanged(!colorChanged);
+  };
 
   const handleOnClick = (index) => {
     if (index) {
@@ -27,7 +34,7 @@ export const NavBar = () => {
         <span className="with-line"></span>
         <div className="left">J</div>
       </div>
-      <div className="links">
+      <div className={`links ${colorChanged ? "mobile" : ""}`}>
         {links.map((link, index) => (
           <a
             href={`#${link.href}`}
@@ -38,7 +45,12 @@ export const NavBar = () => {
           </a>
         ))}
       </div>
-      <button onClick={toContact}>Contact Me</button>
+      <div className="navbutton">
+        <button onClick={toContact}>Contact Me</button>
+        <button className="toggler" onClick={handleColorChange}>
+          Links
+        </button>
+      </div>
     </div>
   );
 };
